@@ -1,5 +1,5 @@
 def print_rangoli(size, d="-", p="abcdefghijklmnopqrstuvwxyz"):    
-    p = (p * ((size // len(p)) + 1))[::-1][-size:]
+    p = (p * (((size - 1) // len(p)) + 1))[::-1][-size:]
     f = lambda y: list(range(0, y)) + list(range(y - 2, -1, -1))
     for i in f(size):
         b = [d] * (size - 1 - i)
